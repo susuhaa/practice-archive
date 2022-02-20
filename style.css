@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0;
+    
+}
+body {
+    
+    background-image: url('bg.png');
+    background-size:80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  
+   
+}
+
+.main_container{
+    position:relative;
+    right: numberRandomizer();
+    left: numberRandomizer();
+}
+
+/* ul{
+    list-style:none;
+    padding: 0;
+    position:over;
+    }
+    
+    
+    #slide, #panel {
+        padding: 15px 0px;
+        text-align: center;
+        background-color: white;
+        /* border-left: solid 3px black;
+        border-bottom: solid 3px black; */
+        /* width: 20%;
+        height: 50%;
+        
+    }
+    
+    #panel {
+        padding: 0px;
+        display: none;
+        background-color: white; 
+    
+    }
+    .makright{
+        position: relative;
+        left: 81.5%;
+        top: 0px;
+    } */

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Archive</title>
+
+</head>
+
+<body>
+    <div class="head" position="relative"></div>
+    <div style="font-family:'Helvetica';font-size:72px;margin-left:10px;margin-top:10px;">Archive</div>
+
+    <!-- <div class="container-fluid sticky-top" style="height:10px;position:relative;">
+        <div id="menu" style="margin-top:1px; " class="makright">
+            <div id="slide"
+                style=" font-size: 72px;color:red;padding-top: 5px;padding-bottom: 30px; font-family: 'Helvetica'; position:relative">
+                Menu </div>
+
+            <div id="panel">
+                <ul>
+                    <li style="border-bottom:solid black 2px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                        <a href="#" style="color: black;">Home</a>
+                    </li>
+                    <li style="border-bottom:solid black 2px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                        <a href="#" style="color: black;">Archive</a>
+                    </li>
+                    <li style="border-bottom:solid black 2px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                        <a href="#" style="color: black;">Agora</a>
+                    </li>
+                    <li style="border-bottom:solid black 2px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                        <a href="#" style="color: black;">Login</a>
+                    </li>
+                    <li style="border-bottom:solid black 2px; padding-top: 80%;padding-bottom: 80%;"></li>
+                </ul>
+            </div>
+        </div> -->
+
+    <div class="main_container">
+        <img src="img/soil.png" style="float: left; width:20%; height:20%;" />
+        <img src=" img/power-outlet.jpg" width="20%" height="20%" />
+        <img src="img/notusing.jpg" width="20%" height="20%" />
+        <img src="img/map.png" width="20%" height="20%" />
+        <img src="img/dam.jpg" width="20%" height="20%" />
+        <img src="img/River.gif" width="20%" height="20%" />
+        <img src="img/low_power_semi.jpg" width="20%" height="20%" />
+        <img src="img/Wind-Energy.gif" width="20%" height="20%" />
+        <img src="img/main.gif" wwidth="350px" height="350px" />
+        <img src="img/Atoms.gif" style="left: 20px; bottom: 10px; width:20%; height:20%;" />
+    </div>
+
+    <script type="text/javascript">
+        var main_container_idx = 10;
+        $('.main_container img')
+            .draggable()
+            .css('cursor', 'move')
+            .mousedown(function () {
+                $(this).css('z-index', main_container_idx);
+                main_container_idx++;
+            });
+        $(".main_container img").css("left", function (index) {
+            return index * numberRandomizer();
+        });
+        $(".main_container img").css("right", function (index) {
+            return index * numberRandomizer();
+        });
+
+    </script>
+
+
+
+
+
+
+    </div>
+
+</body>
+
+
+</html>

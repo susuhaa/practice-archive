@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body {
+ 
+    
+   background-image: url('bg.png');
+    background-position: center;
+    touch-action: manipulation;
+    position: relative;
+}
+
+
+.main_container {
+    min-height: 100vh;
+    width: 100%;
+    overflow: relatvie;
+}
+
+
+.container {
+    align-items: flex-start;
+    -webkit-align-items: flex-start
+}
+
+
+.content .page_content:not([contenteditable=true]) [data-draggable]:active {
+    opacity: 1
+}
+
+[data-view=pinned_bottom] .bottom_pin_invisibility {
+    visibility: hidden
+}
+
+.content [data-draggable] a:active,
+.content [data-draggable] img:active {
+    opacity: initial
+}
+
+.content .draggable-dragging {
+    opacity: initial
+}
+
+[data-draggable].draggable_visible {
+    visibility: visible
+}
+
+[data-draggable].draggable_hidden {
+    visibility: hidden
+}
+
+.gallery_card [data-draggable],
+.marquee [data-draggable] {
+    visibility: inherit
+}
+
+[data-draggable] {
+    visibility: visible;
+}
+
+.image-gallery:not(.initialized) {
+    min-height: 100vh;
+    visibility: hidden;
+    width: 100%
+}
+
+.image-gallery .gallery_card img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.image-gallery .gallery_card {
+    transform-origin: center
+}
+
+.image-gallery .gallery_card.dragging {
+    opacity: .1;
+    transform: initial !important
+}
+
+
+
+[image-gallery=montessori][image-gallery-row] {
+    display: block
+}
+
+[image-gallery=montessori] a.gallery_card,
+[image-gallery=montessori] div.gallery_card {
+    position: absolute;
+    pointer-events: auto
+}
+
+[image-gallery=montessori][data-can-move] .gallery_card,
+[image-gallery=montessori][data-can-move] .gallery_card .gallery_card_image,
+[image-gallery=montessori][data-can-move] .gallery_card .gallery_card_image>* {
+    cursor: move
+}
+
+[image-gallery=montessori] {
+    position: relative;
+    height: 0
+}
+
+[image-gallery=freeform] .gallery_card {
+    position: relative
+}
+
+
+/* 이광현파트 */
+ul{
+list-style:none;
+padding: 0;
+position:over;
+}
+
+
+#slide, #panel {
+    padding: 15px 0px;
+    text-align: center;
+    background-color: white;
+    /* border-left: solid 3px black;
+    border-bottom: solid 3px black; */
+    width: 20%;
+    height: 50%;
+    
+}
+
+#panel {
+    padding: 0px;
+    display: none;
+    background-color: white; 
+
+}
+#slideright1, #panel1 {
+    padding: 10px;
+    text-align: center;
+    /* background-color: white;  */
+    margin:0;
+    width: 10%;
+    height: 10%;
+    
+}
+#panel1 {
+    margin:0;
+    padding: 10px;
+    display: none;
+    /* background-color: white;  */
+    
+    
+    
+}
+#slideright2, #panel2 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+    
+    
+}
+#panel2 {
+    margin:0;
+    padding: 10px;
+    display: none;
+    
+    
+    
+}
+#slideright3, #panel3 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+    
+    
+}
+#panel3 {
+    margin:0;
+    padding: 10px;
+    display: none;
+    
+    
+    
+}
+#slideright4, #panel4 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+    
+    
+}
+#panel4 {
+    margin:0;
+    padding: 10px;
+    display: none;
+    
+    
+    
+}
+#slideright5, #panel5 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+    
+    
+}
+#panel5 {
+    margin:0;
+    padding: 10px;
+    display: none;
+   
+}
+
+.makright{
+    position: relative;
+    left: 81.5%;
+    top: 0px;
+}
+.makright2{
+    position: relative;
+    left:77%;
+    top:50px;
+}
+footer{
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 140px;
+    color: #fff;
+
+}
+
+
+.pic { position: absolute; }
+/* 공을 선택했을 때, 그림자가 생기도록 설정 */
+.pic:hover { box-shadow: 0 0 10px 0 darkgray; cursor: pointer; } 
+
+/* 이광현파트 */
