@@ -18,16 +18,23 @@
 
 
 
-
-
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Archive</title>
 
 </head>
 
 <body>
-    <div class="head" position="relative"></div>
-    <div style="font-family:'Helvetica';font-size:72px;margin-left:10px;margin-top:10px;">Archive</div>
+    <!-- <div class="head" position="relative"></div>
+    <div style="font-family:'Helvetica';font-size:72px;margin-left:10px;margin-top:10px;">Archive</div> -->
+
+    <div class="topnav">
+        <a href="{% url 'user:login' %}">Login</a>
+        <a href="{%url 'pybo:index'%}">Agora</a>
+        <a href="{% url 'user:archive' %}">Archive</a>
+        <a href="{%url 'quiz:start'%}">Game</a>
+
+
+    </div>
 
     <!-- <div class="container-fluid sticky-top" style="height:10px;position:relative;">
         <div id="menu" style="margin-top:1px; " class="makright">
@@ -53,28 +60,29 @@
                 </ul>
             </div>
         </div> -->
-
-    <div class="main_container">
-        <img src="img/soil.png" style="float: left; width:20%; height:20%;" />
-        <img src=" img/power-outlet.jpg" width="20%" height="20%" />
-        <img src="img/notusing.jpg" width="20%" height="20%" />
-        <img src="img/map.png" width="20%" height="20%" />
-        <img src="img/dam.jpg" width="20%" height="20%" />
-        <img src="img/River.gif" width="20%" height="20%" />
-        <img src="img/low_power_semi.jpg" width="20%" height="20%" />
-        <img src="img/Wind-Energy.gif" width="20%" height="20%" />
-        <img src="img/main.gif" wwidth="350px" height="350px" />
-        <img src="img/Atoms.gif" style="left: 20px; bottom: 10px; width:20%; height:20%;" />
+    <div class="container" style="position:absolute;">
+        <img class="main_container">
+        <img src="img/soil.png" style="float:left; width:20%; height:20%; left: 70px; top: - 50px;">
+        <img src="img/power-outlet.jpg" style="float:right; width:20%; height:20%; right: 60px; top: 50px;">
+        <img src="img/grass.png" style="float:left; width:20%; height:20%; left: -350px; top: 200px;" />
+        <img src="img/map.png" style="float:left; width:20%; height:20%; left: 160px; top: 600px;" />
+        <img src="img/dam.jpg" style="float:right; width:20%; height:20%; right:300px; top: -100px;" />
+        <img src="img/p.png" style="float:left; width:15%; height:15%; right:500px; top: 200px;" />
+        <img src="img/Wind-Energy.gif" style="float:left; width:20%; height:20%; left:20px; top: 300px;" />
+        <img src="img/main.gif" style="float:right; width:30%; height:30%; right:630px; top: -300px;" />
+        <img src="img/Atoms.gif" style="float:right; width:20%; height:20%;left: 70px; top: - 50px;" />
+        <img src="img/원자력.png" style="float:left; width:10%; height:10%;left: 370px; top: -330px;" />
+        </img>
     </div>
 
     <script type="text/javascript">
-        var main_container_idx = 10;
-        $('.main_container img')
+        var container_idx = 10;
+        $('.container img')
             .draggable()
             .css('cursor', 'move')
             .mousedown(function () {
-                $(this).css('z-index', main_container_idx);
-                main_container_idx++;
+                $(this).css('z-index', container_idx);
+                container_idx++;
             });
         $(".main_container img").css("left", function (index) {
             return index * numberRandomizer();
@@ -82,6 +90,19 @@
         $(".main_container img").css("right", function (index) {
             return index * numberRandomizer();
         });
+
+        $(document).ready(function () {
+            var bodyWidth = document.body.clientWidth
+            var bodyHeight = document.body.clientHeight
+        });
+        $('.main_container img').each(function () {
+            var randPosX = Math.floor((Math.random() * bodyWidth));
+            var randPosY = Math.floor((Math.random() * bodyHeight));
+            $(this).css('left', randPosX);
+            $(this).css('top', randPosY);
+            posLog.innerHTML = posXY
+        });
+
 
     </script>
 
